@@ -42,7 +42,7 @@ outputLogButton.addEventListener('click', () => {
 });
 
 function outputConsoleLog(message) {
-  alert('10');
+  alert('message');
   console.log(message);
 }
 
