@@ -125,6 +125,14 @@ body {
     font-weight: 400;
 }
 
+.first-color {
+        background-color: green;
+}
+
+.second-color {
+        background-color: blue;
+}
+
 @media (max-width: 768px) {
 
     .catalog__title {

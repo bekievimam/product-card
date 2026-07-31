@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,144 +8,152 @@
   <link rel="icon" type="image/jpeg" href="images/cream-bottle.jpg">
   <title>Выбери свой продукт</title>
 </head>
+
 <body>
 
-<main class="catalog">
-  <div class="catalog__container">
+  <main class="catalog">
+    <div class="catalog__container">
 
-    <h1 class="catalog__title">Выбери свой продукт</h1>
+      <h1 class="catalog__title">Выбери свой продукт</h1>
 
-    <ul class="catalog__list">
+      <button id="change-color-all-card">Изменение цвета всех карточек </button>
+      <button id="change-color-first-card"> Изменение цвета первой карточки </button>
+      <button id="open-google">Открыть google</button>
+      <button id="output-console-log">Открыть консоль лог</button>
+      <button id="toggle-color-button" class="first-color"> Изменить цвет</button>
 
-      <li class="catalog__item">
-        <img class="catalog__image" src="images/cream-bottle.jpg" alt="Увлажняющий мусс">
+      <ul class="catalog__list">
 
-        <p class="catalog__application">для нормальной кожи</p>
+        <li class="catalog__item">
+          <img class="catalog__image" src="images/cream-bottle.jpg" alt="Увлажняющий мусс">
 
-        <h2 class="catalog__name">Увлажняющий мусс</h2>
+          <p class="catalog__application">для нормальной кожи</p>
 
-        <p class="catalog__description">
-          Глубоко увлажняет кожу лица, оставляя её мягкой и гладкой.
-        </p>
+          <h2 class="catalog__name">Увлажняющий мусс</h2>
 
-        <span class="catalog__composition-title">Состав:</span>
+          <p class="catalog__description">
+            Глубоко увлажняет кожу лица, оставляя её мягкой и гладкой.
+          </p>
 
-        <ul class="catalog__composition-list">
-          <li class="catalog__composition-item">активные натуральные комплексы</li>
-          <li class="catalog__composition-item">витамины C, A, PP, B и E</li>
-          <li class="catalog__composition-item">солнцезащитные компоненты</li>
-        </ul>
+          <span class="catalog__composition-title">Состав:</span>
 
-        <div class="catalog__price">
-          <span class="catalog__price-title">Цена</span>
-          <span class="catalog__price-value">2 750 ₽</span>
-        </div>
-      </li>
+          <ul class="catalog__composition-list">
+            <li class="catalog__composition-item">активные натуральные комплексы</li>
+            <li class="catalog__composition-item">витамины C, A, PP, B и E</li>
+            <li class="catalog__composition-item">солнцезащитные компоненты</li>
+          </ul>
 
-      <li class="catalog__item">
-        <img class="catalog__image" src="images/moisturizing-mask.jpg" alt="Увлажняющая маска">
+          <div class="catalog__price">
+            <span class="catalog__price-title">Цена</span>
+            <span class="catalog__price-value">2 750 ₽</span>
+          </div>
+        </li>
 
-        <p class="catalog__application">для нормальной кожи</p>
+        <li class="catalog__item">
+          <img class="catalog__image" src="images/moisturizing-mask.jpg" alt="Увлажняющая маска">
 
-        <h2 class="catalog__name">Увлажняющая маска</h2>
+          <p class="catalog__application">для нормальной кожи</p>
 
-        <p class="catalog__description">
-          Способствует удерживанию влаги в верхних слоях кожи.
-        </p>
+          <h2 class="catalog__name">Увлажняющая маска</h2>
 
-        <span class="catalog__composition-title">Состав:</span>
+          <p class="catalog__description">
+            Способствует удерживанию влаги в верхних слоях кожи.
+          </p>
 
-        <ul class="catalog__composition-list">
-          <li class="catalog__composition-item">воски</li>
-          <li class="catalog__composition-item">минералы</li>
-          <li class="catalog__composition-item">масла</li>
-        </ul>
+          <span class="catalog__composition-title">Состав:</span>
 
-        <div class="catalog__price">
-          <span class="catalog__price-title">Цена</span>
-          <span class="catalog__price-value">3 500 ₽</span>
-        </div>
-      </li>
+          <ul class="catalog__composition-list">
+            <li class="catalog__composition-item">воски</li>
+            <li class="catalog__composition-item">минералы</li>
+            <li class="catalog__composition-item">масла</li>
+          </ul>
 
-      <li class="catalog__item">
-        <img class="catalog__image" src="images/facewash-gel.jpg" alt="Гель для умывания">
+          <div class="catalog__price">
+            <span class="catalog__price-title">Цена</span>
+            <span class="catalog__price-value">3 500 ₽</span>
+          </div>
+        </li>
 
-        <p class="catalog__application">для нормальной кожи</p>
+        <li class="catalog__item">
+          <img class="catalog__image" src="images/facewash-gel.jpg" alt="Гель для умывания">
 
-        <h2 class="catalog__name">Гель для умывания</h2>
+          <p class="catalog__application">для нормальной кожи</p>
 
-        <p class="catalog__description">
-          Интенсивно очищает кожу, не повреждая её защитный барьер.
-        </p>
+          <h2 class="catalog__name">Гель для умывания</h2>
 
-        <span class="catalog__composition-title">Состав:</span>
+          <p class="catalog__description">
+            Интенсивно очищает кожу, не повреждая её защитный барьер.
+          </p>
 
-        <ul class="catalog__composition-list">
-          <li class="catalog__composition-item">минералы</li>
-          <li class="catalog__composition-item">витамины C, A, PP, B и E</li>
-          <li class="catalog__composition-item">солнцезащитные компоненты</li>
-        </ul>
+          <span class="catalog__composition-title">Состав:</span>
 
-        <div class="catalog__price">
-          <span class="catalog__price-title">Цена</span>
-          <span class="catalog__price-value">1 650 ₽</span>
-        </div>
-      </li>
+          <ul class="catalog__composition-list">
+            <li class="catalog__composition-item">минералы</li>
+            <li class="catalog__composition-item">витамины C, A, PP, B и E</li>
+            <li class="catalog__composition-item">солнцезащитные компоненты</li>
+          </ul>
 
-      <li class="catalog__item">
-        <img class="catalog__image" src="images/gift-set1.jpg" alt="Подарочный набор №1">
+          <div class="catalog__price">
+            <span class="catalog__price-title">Цена</span>
+            <span class="catalog__price-value">1 650 ₽</span>
+          </div>
+        </li>
 
-        <p class="catalog__application">для нормальной кожи</p>
+        <li class="catalog__item">
+          <img class="catalog__image" src="images/gift-set1.jpg" alt="Подарочный набор №1">
 
-        <h2 class="catalog__name">Подарочный набор №1</h2>
+          <p class="catalog__application">для нормальной кожи</p>
 
-        <p class="catalog__description">
-          Набор, состоящий из увлажняющего крема и маски.
-        </p>
+          <h2 class="catalog__name">Подарочный набор №1</h2>
 
-        <span class="catalog__composition-title">Состав:</span>
+          <p class="catalog__description">
+            Набор, состоящий из увлажняющего крема и маски.
+          </p>
 
-        <ul class="catalog__composition-list">
-          <li class="catalog__composition-item">воски</li>
-          <li class="catalog__composition-item">минералы</li>
-          <li class="catalog__composition-item">масла</li>
-        </ul>
+          <span class="catalog__composition-title">Состав:</span>
 
-        <div class="catalog__price">
-          <span class="catalog__price-title">Цена</span>
-          <span class="catalog__price-value">4 750 ₽</span>
-        </div>
-      </li>
+          <ul class="catalog__composition-list">
+            <li class="catalog__composition-item">воски</li>
+            <li class="catalog__composition-item">минералы</li>
+            <li class="catalog__composition-item">масла</li>
+          </ul>
 
-      <li class="catalog__item">
-        <img class="catalog__image" src="images/gift-set5.jpg" alt="Подарочный набор №5">
+          <div class="catalog__price">
+            <span class="catalog__price-title">Цена</span>
+            <span class="catalog__price-value">4 750 ₽</span>
+          </div>
+        </li>
 
-        <p class="catalog__application">для нормальной кожи</p>
+        <li class="catalog__item">
+          <img class="catalog__image" src="images/gift-set5.jpg" alt="Подарочный набор №5">
 
-        <h2 class="catalog__name">Подарочный набор №5</h2>
+          <p class="catalog__application">для нормальной кожи</p>
 
-        <p class="catalog__description">
-          Полный набор средств Invisible Symphony: крем, маска, мусс и гель для умывания.
-        </p>
+          <h2 class="catalog__name">Подарочный набор №5</h2>
 
-        <span class="catalog__composition-title">Состав:</span>
+          <p class="catalog__description">
+            Полный набор средств Invisible Symphony: крем, маска, мусс и гель для умывания.
+          </p>
 
-        <ul class="catalog__composition-list">
-          <li class="catalog__composition-item">воски</li>
-          <li class="catalog__composition-item">минералы</li>
-          <li class="catalog__composition-item">масла</li>
-        </ul>
+          <span class="catalog__composition-title">Состав:</span>
 
-        <div class="catalog__price">
-          <span class="catalog__price-title">Цена</span>
-          <span class="catalog__price-value">7 520 ₽</span>
-        </div>
-      </li>
+          <ul class="catalog__composition-list">
+            <li class="catalog__composition-item">воски</li>
+            <li class="catalog__composition-item">минералы</li>
+            <li class="catalog__composition-item">масла</li>
+          </ul>
 
-    </ul>
+          <div class="catalog__price">
+            <span class="catalog__price-title">Цена</span>
+            <span class="catalog__price-value">7 520 ₽</span>
+          </div>
+        </li>
 
-  </div>
-</main>
+      </ul>
 
+    </div>
+  </main>
+  <script src="main.js"></script>
 </body>
+
 </html>
