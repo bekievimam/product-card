@@ -37,10 +37,6 @@ function calculateTotalPrice(price, quantity) {
   return price * quantity;
 }
 
-function calculateTotalPrice(price, quantity) {
-  return price * quantity;
-}
-
 console.log(calculateTotalPrice(100, 3));
 
 const userAge = 20;
