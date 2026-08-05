@@ -23,11 +23,30 @@ const productPrice = 50000;
 
 function buyProduct (userBudget){
   if (userBudget >= productPrice) {
-    console.log ("Товар успешно приобретен")
-  }  else {
-   const diff = productPrice - userBudget;
-   console.log("Вам не хватает " + diff + "$, пополните баланс");
+    console.log(`${productName} приобретён. Спасибо за покупку!`);
+  } else {
+    const diff = productPrice - userBudget;
+    console.log(`Вам не хватает ${diff}$, пополните баланс`);
   }
 }
+
 buyProduct(60000);
 buyProduct(30000);
+
+function calculateTotalPrice(price, quantity) {
+  return price * quantity;
+}
+
+function calculateTotalPrice(price, quantity) {
+  return price * quantity;
+}
+
+console.log(calculateTotalPrice(100, 3));
+
+const userAge = 20;
+let isStudent = true;
+let userCity = "Derbent"
+
+console.log(userAge);
+console.log(isStudent);
+console.log(userCity);
