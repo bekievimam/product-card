@@ -4,159 +4,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/jpeg" href="images/cream-bottle.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="images/cream-bottle.jpg">
+
   <title>Выбери свой продукт</title>
 </head>
 
 <body>
 
   <main class="catalog">
+
+    <button id="registrationButton"> Регистрация </button>
+    
+    <div class="modal">
+
+    <button class="modal-close">×</button>
+      <form class="registration-form">
+
+        <label for="name">Имя</label>
+        <input type="text" id="name" placeholder="Имя" required>
+
+        <label for="lastName">Фамилия</label>
+        <input type="text" id="lastName" placeholder="Фамилия " required>
+
+        <label for="dateOfBirth">Дата рождения</label>
+        <input type="date" id="dateOfBirth" placeholder="Дата рождения" required>
+
+        <label for="login">Логин</label>
+        <input type="text" id="login" placeholder="Логин " required> 
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" placeholder="Пароль" required>
+
+        <label for="confirmPassword">Повторите пароль</label>
+        <input type="password" id="confirmPassword" placeholder=" Повторите пароль" required>
+
+        <button type="submit">Зарегистрироваться</button>
+
+      </form>
+    </div>
+
+    <div class="overlay"></div>
+
     <div class="catalog__container">
 
-      <h1 class="catalog__title">Выбери свой продукт</h1>
+      <h1 class="catalog__title">
+        Выбери свой продукт
+      </h1>
 
-      <button id="change-color-all-card">Изменение цвета всех карточек </button>
-      <button id="change-color-first-card"> Изменение цвета первой карточки </button>
-      <button id="open-google">Открыть google</button>
-      <button id="output-console-log">Открыть консоль лог</button>
-      <button id="toggle-color-button" class="first-color"> Изменить цвет</button>
+      <div class="catalog__buttons">
+
+        <button id="change-color-all-card">
+          Изменить цвет всех карточек
+        </button>
+
+        <button id="change-color-first-card">
+          Изменить цвет первой карточки
+        </button>
+
+        <button id="open-google">
+          Открыть Google
+        </button>
+
+        <button id="output-console-log">
+          Вывести в console.log
+        </button>
+
+        <button id="toggle-color-button" class="first-color">
+          Изменить цвет
+        </button>
+
+      </div>
 
       <ul class="catalog__list">
 
-        <li class="catalog__item">
-          <img class="catalog__image" src="images/cream-bottle.jpg" alt="Увлажняющий мусс">
+        <template id="product-template">
 
-          <p class="catalog__application">для нормальной кожи</p>
+          <li class="catalog__item">
 
-          <h2 class="catalog__name">Увлажняющий мусс</h2>
+            <img
+              class="catalog__image"
+              src="images/cream-bottle.jpg"
+              alt="Увлажняющий мусс"
+            >
 
-          <p class="catalog__description">
-            Глубоко увлажняет кожу лица, оставляя её мягкой и гладкой.
-          </p>
+            <span class="catalog__application">
+              для нормальной кожи
+            </span>
 
-          <span class="catalog__composition-title">Состав:</span>
+            <h2 class="catalog__name">
+              Увлажняющий мусс
+            </h2>
 
-          <ul class="catalog__composition-list">
-            <li class="catalog__composition-item">активные натуральные комплексы</li>
-            <li class="catalog__composition-item">витамины C, A, PP, B и E</li>
-            <li class="catalog__composition-item">солнцезащитные компоненты</li>
-          </ul>
+            <p class="catalog__description">
+              Глубоко увлажняет кожу лица, оставляя её мягкой и гладкой.
+            </p>
 
-          <div class="catalog__price">
-            <span class="catalog__price-title">Цена</span>
-            <span class="catalog__price-value">2 750 ₽</span>
-          </div>
-        </li>
+            <span class="catalog__composition-title">
+              Состав:
+            </span>
 
-        <li class="catalog__item">
-          <img class="catalog__image" src="images/moisturizing-mask.jpg" alt="Увлажняющая маска">
+            <ul class="catalog__composition-list">
 
-          <p class="catalog__application">для нормальной кожи</p>
+              <li class="catalog__composition-item">
+                активные натуральные комплексы
+              </li>
 
-          <h2 class="catalog__name">Увлажняющая маска</h2>
+              <li class="catalog__composition-item">
+                витамины C, A, PP, B и E
+              </li>
 
-          <p class="catalog__description">
-            Способствует удерживанию влаги в верхних слоях кожи.
-          </p>
+              <li class="catalog__composition-item">
+                солнцезащитные компоненты
+              </li>
 
-          <span class="catalog__composition-title">Состав:</span>
+            </ul>
 
-          <ul class="catalog__composition-list">
-            <li class="catalog__composition-item">воски</li>
-            <li class="catalog__composition-item">минералы</li>
-            <li class="catalog__composition-item">масла</li>
-          </ul>
+            <div class="catalog__price">
 
-          <div class="catalog__price">
-            <span class="catalog__price-title">Цена</span>
-            <span class="catalog__price-value">3 500 ₽</span>
-          </div>
-        </li>
+              <span class="catalog__price-title">
+                Цена:
+              </span>
 
-        <li class="catalog__item">
-          <img class="catalog__image" src="images/facewash-gel.jpg" alt="Гель для умывания">
+              <span class="catalog__price-value">
+                2 750 ₽
+              </span>
 
-          <p class="catalog__application">для нормальной кожи</p>
+            </div>
 
-          <h2 class="catalog__name">Гель для умывания</h2>
+          </li>
 
-          <p class="catalog__description">
-            Интенсивно очищает кожу, не повреждая её защитный барьер.
-          </p>
-
-          <span class="catalog__composition-title">Состав:</span>
-
-          <ul class="catalog__composition-list">
-            <li class="catalog__composition-item">минералы</li>
-            <li class="catalog__composition-item">витамины C, A, PP, B и E</li>
-            <li class="catalog__composition-item">солнцезащитные компоненты</li>
-          </ul>
-
-          <div class="catalog__price">
-            <span class="catalog__price-title">Цена</span>
-            <span class="catalog__price-value">1 650 ₽</span>
-          </div>
-        </li>
-
-        <li class="catalog__item">
-          <img class="catalog__image" src="images/gift-set1.jpg" alt="Подарочный набор №1">
-
-          <p class="catalog__application">для нормальной кожи</p>
-
-          <h2 class="catalog__name">Подарочный набор №1</h2>
-
-          <p class="catalog__description">
-            Набор, состоящий из увлажняющего крема и маски.
-          </p>
-
-          <span class="catalog__composition-title">Состав:</span>
-
-          <ul class="catalog__composition-list">
-            <li class="catalog__composition-item">воски</li>
-            <li class="catalog__composition-item">минералы</li>
-            <li class="catalog__composition-item">масла</li>
-          </ul>
-
-          <div class="catalog__price">
-            <span class="catalog__price-title">Цена</span>
-            <span class="catalog__price-value">4 750 ₽</span>
-          </div>
-        </li>
-
-        <li class="catalog__item">
-          <img class="catalog__image" src="images/gift-set5.jpg" alt="Подарочный набор №5">
-
-          <p class="catalog__application">для нормальной кожи</p>
-
-          <h2 class="catalog__name">Подарочный набор №5</h2>
-
-          <p class="catalog__description">
-            Полный набор средств Invisible Symphony: крем, маска, мусс и гель для умывания.
-          </p>
-
-          <span class="catalog__composition-title">Состав:</span>
-
-          <ul class="catalog__composition-list">
-            <li class="catalog__composition-item">воски</li>
-            <li class="catalog__composition-item">минералы</li>
-            <li class="catalog__composition-item">масла</li>
-          </ul>
-
-          <div class="catalog__price">
-            <span class="catalog__price-title">Цена</span>
-            <span class="catalog__price-value">7 520 ₽</span>
-          </div>
-        </li>
+        </template>
 
       </ul>
 
     </div>
+
   </main>
+ <footer class="custom-footer">
+    <div class="footer-content">
+        
+        <div class="footer-column">
+            <h2 class="footer-title">Product Cards</h2>
+            <p class="footer-text">У Нас Самые Лучшие Продукты Для Кожи!</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#"><i class="fab fa-vk"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <p class="subscribe-label">Подпишись на наши акции:</p>
+            <form class="subscribe-form">
+                <input class="subscribe-input" type="email" placeholder="Введи Email..." required>
+                <button type="submit">Подписаться</button>
+            </form>
+        </div>
+
+        <div class="footer-column">
+            <h2 class="footer-title">Быстрые ссылки</h2>
+            <ul class="footer-links">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Магазин</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <hr>
+        <p>www.product-cards.com © all right reserve</p>
+    </div>
+</footer>
+
+
   <script src="main.js"></script>
   <script src="homework-7.js"></script>
   <script src="homework-8.js"></script>
   <script type="module" src="homework-9.js"></script>
+  <script type="module" src="./homework-10.js"></script>
+  <script src="homework-11.js"></script>
+
 </body>
 
 </html>
+```
