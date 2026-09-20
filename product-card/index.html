@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="icon" href="images/cream-bottle.jpg">
 
   <title>Выбери свой продукт</title>
@@ -15,6 +15,38 @@
 <body>
 
   <main class="catalog">
+
+    <button id="registrationButton"> Регистрация </button>
+    
+    <div class="modal">
+
+    <button class="modal-close">×</button>
+      <form class="registration-form">
+
+        <label for="name">Имя</label>
+        <input type="text" id="name" placeholder="Имя" required>
+
+        <label for="lastName">Фамилия</label>
+        <input type="text" id="lastName" placeholder="Фамилия " required>
+
+        <label for="dateOfBirth">Дата рождения</label>
+        <input type="date" id="dateOfBirth" placeholder="Дата рождения" required>
+
+        <label for="login">Логин</label>
+        <input type="text" id="login" placeholder="Логин " required> 
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" placeholder="Пароль" required>
+
+        <label for="confirmPassword">Повторите пароль</label>
+        <input type="password" id="confirmPassword" placeholder=" Повторите пароль" required>
+
+        <button type="submit">Зарегистрироваться</button>
+
+      </form>
+    </div>
+
+    <div class="overlay"></div>
 
     <div class="catalog__container">
 
@@ -111,12 +143,49 @@
     </div>
 
   </main>
+ <footer class="custom-footer">
+    <div class="footer-content">
+        
+        <div class="footer-column">
+            <h2 class="footer-title">Product Cards</h2>
+            <p class="footer-text">У Нас Самые Лучшие Продукты Для Кожи!</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#"><i class="fab fa-vk"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <p class="subscribe-label">Подпишись на наши акции:</p>
+            <form class="subscribe-form">
+                <input class="subscribe-input" type="email" placeholder="Введи Email..." required>
+                <button type="submit">Подписаться</button>
+            </form>
+        </div>
+
+        <div class="footer-column">
+            <h2 class="footer-title">Быстрые ссылки</h2>
+            <ul class="footer-links">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Магазин</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <hr>
+        <p>www.product-cards.com © all right reserve</p>
+    </div>
+</footer>
+
 
   <script src="main.js"></script>
   <script src="homework-7.js"></script>
   <script src="homework-8.js"></script>
   <script type="module" src="homework-9.js"></script>
   <script type="module" src="./homework-10.js"></script>
+  <script src="homework-11.js"></script>
 
 </body>
 
