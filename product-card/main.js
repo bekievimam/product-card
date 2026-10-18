@@ -108,3 +108,21 @@ document.getElementById("registrationForm").addEventListener("submit", (event) =
 
   modal.close();
 });
+
+const subscribeForm = new Form("subscribeForm");
+
+document.getElementById("subscribeForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  if (!subscribeForm.isValid()) {
+    return;
+  }
+
+  const values = subscribeForm.getValues();
+
+  console.log("Подписка:", {
+    email: values.subscribeEmail
+  });
+
+  subscribeForm.reset();
+});

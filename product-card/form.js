@@ -1,24 +1,26 @@
 class Form {
-  constructor(id) { 
-    this.form = document.getElementById(id)
-
-  }
-  getValues() { 
-    return { 
-      name: this.form.querySelector("#name").value,
-      lastName: this.form.querySelector("#lastName").value,
-      dateOfBirth: this.form.querySelector("#dateOfBirth").value,
-      login: this.form.querySelector("#login").value,
-      password: this.form.querySelector("#password").value,
-      confirmPassword: this.form.querySelector("#confirmPassword").value,
-    } }
-    isValid() { 
-      return this.form.checkValidity();
-
-    } 
-     reset() { 
-      this.form.reset();
-     }
+  constructor(id) {
+    this.form = document.getElementById(id);
   }
 
-  export default Form;
+  getValues() {
+    const values = {};
+    const inputs = this.form.querySelectorAll("input");
+
+    inputs.forEach((input) => {
+      values[input.id] = input.value;
+    });
+
+    return values;
+  }
+
+  isValid() {
+    return this.form.checkValidity();
+  }
+
+  reset() {
+    this.form.reset();
+  }
+}
+
+export default Form;
