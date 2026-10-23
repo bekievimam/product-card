@@ -6,6 +6,7 @@ import "./homework-11.js";
 import "./comment.js"; 
 import { Cream } from "./ProductClasses.js";
 import Form from "./form.js";
+import "./homework-13.js";
 
 // Покраска всех карточек
 const productCards = document.querySelectorAll('.catalog__item');
