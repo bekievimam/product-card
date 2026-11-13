@@ -1,5 +1,5 @@
 class Modal {
-  constructor(id) {
+  constructor(id, shouldCloseOnOverlay = true) {
     this.modal = document.getElementById(id);
     this.id = id;
 
@@ -7,12 +7,16 @@ class Modal {
     this.overlay = document.querySelector(".overlay");
 
     this.closeButton.addEventListener("click", () => {
-    this.close();
-    });
-    
-    this.overlay.addEventListener("click", () => {
       this.close();
     });
+
+    if (shouldCloseOnOverlay) {
+      this.overlay.addEventListener("click", () => {
+        if (this.isOpen()) {
+          this.close();
+        }
+      });
+    }
   }
 
   open() {
@@ -30,4 +34,4 @@ class Modal {
   }
 }
 
-export default Modal; 
+export default Modal;
